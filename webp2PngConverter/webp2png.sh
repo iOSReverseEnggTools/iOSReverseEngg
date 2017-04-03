@@ -26,5 +26,23 @@ done
 
 echo "Done converting $count files"
 
+echo "********************************"
+echo "Do you want to see extrated files? [y/n]"
+read input
+if [ $input == "y" ]; then 
+	ls "$widthInPx"
+	echo "*****************************************************"
+	echo "* Do you want to open folder enclosing files? [y/n] *"
+	echo "*****************************************************" 
+	read input
+	if [ $input == "y" ]; then 
+		open "$widthInPx"
+	fi
+
+fi
+	echo "******************************"
+	echo "* Thanks for using converter *"
+	echo "******************************"
+
 #improvement passign the directory
 #surpressing the log output only final message on screen 
